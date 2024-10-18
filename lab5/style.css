@@ -1,0 +1,14 @@
+.chat {
+  display: flex;
+  padding: 20px;
+  border: 2px solid black;
+  width: 600px;
+}
+
+.user {
+  width: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

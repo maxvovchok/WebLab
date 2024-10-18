@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="width">Ширина:</label>
+      <input
+        type="number"
+        id="width"
+        placeholder="Введіть ширину"
+        min="1"
+        max="1000"
+        required
+      /><br /><br />
+
+      <label for="height">Довжина:</label>
+      <input
+        type="number"
+        id="height"
+        placeholder="Введіть довжину"
+        min="1"
+        max="1000"
+        required
+      /><br /><br />
+
+      <p>Периметр: <span id="perimeter">0</span></p>
+      <p>Площа: <span id="area">0</span></p>
+      <p>Діагональ: <span id="diagonal">0</span></p>
+    </form>
+    <hr />
+
+    <h2>Чат</h2>
+
+    <section class="chat">
+      <div class="user">
+        <input type="text" id="user1" placeholder="Користувач 1" />
+        <button onclick="sendMessage('user1')">Відправити</button>
+      </div>
+      <div
+        id="chat-box"
+        style="
+          border: 1px solid black;
+          width: 300px;
+          height: 200px;
+          overflow: auto;
+        "
+      ></div>
+      <div class="user">
+        <input type="text" id="user2" placeholder="Користувач 2" />
+        <button onclick="sendMessage('user2')">Відправити</button>
+      </div>
+    </section>
+
+    <hr />
+
+    <h2>Транслітерація</h2>
+    <textarea
+      id="ukrainian-text"
+      placeholder="Введіть український текст"
+      rows="4"
+      cols="50"
+    ></textarea
+    ><br /><br />
+    <textarea
+      id="transliterated-text"
+      placeholder="Транслітерований текст"
+      rows="4"
+      cols="50"
+      readonly
+    ></textarea>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
