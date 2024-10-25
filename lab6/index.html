@@ -665,10 +665,12 @@
           <p class="modal-text">
             <b>Registration</b>
           </p>
+
           <label class="form-description">
             <span class="form-description-text-name">Name</span>
             <div class="form-input-wrapper">
               <input
+                id="name"
                 class="form-input"
                 type="text"
                 name="user_name"
@@ -680,14 +682,17 @@
                 <use href="./images/icons/user-contacts.svg#person"></use>
               </svg>
             </div>
+            <small class="error-message" id="nameError"></small>
           </label>
+
           <label class="form-description">
             <span class="form-description-text-name">Last Name</span>
             <div class="form-input-wrapper">
               <input
+                id="lastName"
                 class="form-input"
                 type="text"
-                name="user_name"
+                name="user_last_name"
                 pattern="^[a-zA-Zа-яА-Я]+"
                 minlength="3"
                 required
@@ -696,14 +701,17 @@
                 <use href="./images/icons/user-contacts.svg#person"></use>
               </svg>
             </div>
+            <small class="error-message" id="lastNameError"></small>
           </label>
+
           <label class="form-description">
             <span class="form-description-text-name">Middle Name</span>
             <div class="form-input-wrapper">
               <input
+                id="middleName"
                 class="form-input"
                 type="text"
-                name="user_name"
+                name="user_middle_name"
                 pattern="^[a-zA-Zа-яА-Я]+"
                 minlength="3"
                 required
@@ -712,39 +720,76 @@
                 <use href="./images/icons/user-contacts.svg#person"></use>
               </svg>
             </div>
+            <small class="error-message" id="middleNameError"></small>
           </label>
+
           <label class="form-description">
             <span class="form-description-text">Email</span>
             <div class="form-input-wrapper">
-              <input class="form-input" type="text" name="user_email" />
+              <input
+                id="email"
+                class="form-input"
+                type="email"
+                name="user_email"
+                required
+              />
               <svg class="form-icon" width="12" height="12">
                 <use href="./images/icons/user-contacts.svg#email"></use>
               </svg>
             </div>
+            <small class="error-message" id="emailError"></small>
           </label>
+
+          <label class="form-description">
+            <span class="form-description-text">Phone</span>
+            <div class="form-input-wrapper">
+              <input
+                id="phone"
+                class="form-input"
+                type="text"
+                name="phone"
+                placeholder="+38(0__) -___-__-__"
+                required
+              />
+            </div>
+            <small class="error-message" id="phoneError"></small>
+          </label>
+
           <label class="form-description">
             <span class="form-description-text">Password</span>
             <div class="form-input-wrapper">
-              <input class="form-input" type="password" name="user_email" />
+              <input
+                class="form-input"
+                type="password"
+                name="user_password"
+                required
+              />
             </div>
+            <small class="error-message" id="passwordError"></small>
           </label>
+
           <label class="form-description">
             <span class="form-description-text">Date of birth</span>
             <div class="form-input-wrapper">
-              <input class="form-input" type="date" name="user_email" />
+              <input class="form-input" type="date" name="user_dob" required />
             </div>
+            <small class="error-message" id="dobError"></small>
           </label>
+
           <label class="form-description">
-            <span class="form-description-text">Date of birth</span>
+            <span class="form-description-text">Group</span>
             <div class="form-input-wrapper">
-              <select name="" id="" class="form-input">
-                <option value="">IA-31</option>
-                <option value="">IA-32</option>
-                <option value="">IA-33</option>
-                <option value="">IA-34</option>
+              <select name="group" class="form-input" required>
+                <option value="">Select a group</option>
+                <option value="IA-31">IA-31</option>
+                <option value="IA-32">IA-32</option>
+                <option value="IA-33">IA-33</option>
+                <option value="IA-34">IA-34</option>
               </select>
             </div>
+            <small class="error-message" id="groupError"></small>
           </label>
+
           <label class="form-description">
             <span class="form-description-text">Upload Document</span>
             <div class="form-input-wrapper">
@@ -759,26 +804,58 @@
                 <use href="./images/icons/user-contacts.svg#upload"></use>
               </svg>
             </div>
+            <small class="error-message" id="documentError"></small>
           </label>
+
           <input
             class="form-input-check visually-hidden"
             id="user-policy"
             type="checkbox"
             name="user_check"
+            required
           />
-          <label for="user-policy" class="form-description-content">
-            <p class="form-description-content-text">
-              I accept the terms and conditions of the
-              <a class="form-description-content-link" href=""
-                >Privacy Policy</a
-              >
-            </p>
-            <svg class="form-icon-check" width="10" height="8">
-              <use href="./images/icons/user-contacts.svg#check"></use>
-            </svg>
+
+          <label class="form-description">
+            <span class="form-description-text">Gender</span>
+            <div class="form-input-wrapper">
+              <label>
+                <input type="radio" name="gender" value="Male" required /> Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="Female" /> Female
+              </label>
+            </div>
+            <small class="error-message" id="genderError"></small>
           </label>
-          <button type="submit" class="form-btn-send">Send</button>
+
+          <button
+            type="submit"
+            onclick="submitForm(event)"
+            class="form-btn-send"
+          >
+            Send
+          </button>
         </form>
+
+        <table id="userTable">
+          <thead>
+            <tr>
+              <th>Select</th>
+              <th>Name</th>
+              <th>Last Name</th>
+              <th>Middle Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Gender</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button onclick="handleSelectedRows('delete')">Delete Selected</button>
+        <button onclick="handleSelectedRows('duplicate')">
+          Duplicate Selected
+        </button>
       </div>
     </div>
     <div class="backdrop is-hidden" modal-login>
@@ -811,6 +888,22 @@
 
           <button type="submit" class="form-btn-send">Send</button>
         </form>
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>Select</th>
+              <th>Name</th>
+              <th>Last Name</th>
+              <th>Middle Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Gender</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button id="deleteSelected">Delete Selected</button>
+        <button id="duplicateSelected">Duplicate Selected</button>
       </div>
     </div>
     <div class="menu-container js-menu-container" id="mobile-menu">
@@ -900,5 +993,6 @@
     ></script>
     <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/register.js"></script>
   </body>
 </html>

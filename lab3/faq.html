@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <title></title>
+  </head>
+  <body>
+    <header class="head">
+      <div class="header-container container">
+        <a class="navigation-logo-img1-link" href="./index.html">
+          Web<span class="logo-img1-durk">Studio</span>
+        </a>
+        <nav class="navigation">
+          <ul class="navigation-menu-list">
+            <li class="navigation-menu-item">
+              <a class="navigation-menu-link" href="./index.html">Studio</a>
+            </li>
+            <li class="navigation-menu-item">
+              <a class="navigation-menu-link" href="portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="navigation-menu-item">
+              <a class="navigation-menu-link current" href="faq.html">FAQ</a>
+            </li>
+            <li class="navigation-menu-item">
+              <a class="navigation-menu-link" href="admin.html">Admin panel</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="32"
+            height="22"
+            fill="#2E2F42"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul class="contacts-list">
+          <li class="contacts-item">
+            <a class="contacts-link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="contacts-item">
+            <a class="contacts-link" href="tel:+11(000)111-11-11"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="faq">
+      <h1 class="faq-title">Frequently Asked Questions</h1>
+      <div class="faq-item">
+        <h3 class="faq-question">What is your return policy?</h3>
+        <p class="faq-answer">
+          You can return any item within 30 days of purchase with a receipt.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How do I track my order?</h3>
+        <p class="faq-answer">
+          Once your order has been shipped, we will provide a tracking number.
+        </p>
+      </div>
+    </section>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="black"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <ul class="mobile-menu">
+        <li class="navigation-menu-item-mobile">
+          <a href="" class="navigation-menu-link-mobile">Studio</a>
+        </li>
+        <li class="navigation-menu-item-mobile">
+          <a href="./portfolio.html" class="navigation-menu-link-mobile"
+            >Portfolio</a
+          >
+        </li>
+        <li class="navigation-menu-item-mobile">
+          <a href="faq.html" class="navigation-menu-link-mobile current-mobile"
+            >FAQ</a
+          >
+        </li>
+        <li class="navigation-menu-item-mobile">
+          <a href="admin.html" class="navigation-menu-link-mobile"
+            >Admin panel</a
+          >
+        </li>
+      </ul>
+      <ul class="contacts-list-mobile">
+        <li class="contacts-item-mobile-tel">
+          <a class="contacts-link-mobile-tel" href="tel:+11(000)111-11-11"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="contacts-item-mobile-mail">
+          <a class="contacts-link-mobile-mail" href="mailto:info@devstudio.com"
+            >info@devstudio.com
+          </a>
+        </li>
+      </ul>
+      <ul class="socials-list-mobile">
+        <li class="socials-item-mobile">
+          <a class="socials-link-mobile" href="">
+            <svg width="24" height="24">
+              <use href="./images/icons/socials-icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item-mobile">
+          <a class="socials-link-mobile" href="">
+            <svg width="24" height="24">
+              <use href="./images/icons/socials-icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item-mobile">
+          <a class="socials-link-mobile" href="">
+            <svg width="24" height="24">
+              <use href="./images/icons/socials-icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item-mobile">
+          <a class="socials-link-mobile" href="">
+            <svg width="24" height="24">
+              <use href="./images/icons/socials-icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script defer src="./js/mobile-menu.js"></script>
+  </body>
+</html>

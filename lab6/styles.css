@@ -848,6 +848,8 @@ a {
   top: 50%;
   left: 50%;
   width: 408px;
+  height: 600px;
+  overflow-y: auto;
   transform: translate(-50%, -50%);
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -856,15 +858,16 @@ a {
   transition: transform 800ms ease-out, 200ms, opacity ease-out;
   padding: 72px 24px 24px;
 }
+
 @media screen and (max-width: 767px) {
   .modal {
     width: 95%;
     max-width: 392px;
-    height: 95%;
-    max-height: 586px;
-    overflow: scroll;
+    height: 586px;
+    overflow-y: auto;
   }
 }
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -75%);
   opacity: 0;
@@ -1168,4 +1171,21 @@ a {
 }
 .socials-link-mobile {
   fill: var(--light-bg-cl);
+}
+
+#phone {
+  padding-left: 5px;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
 }
