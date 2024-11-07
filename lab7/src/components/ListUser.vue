@@ -1,5 +1,5 @@
 <template>
-  <section class="userList">
+  <section v-if="users.length > 0" class="userList">
     <table v-if="currentUsers.length" class="users-table">
       <thead>
         <tr>
@@ -89,9 +89,13 @@ export default {
 
 <style>
 .userList {
-  width: 350px;
+  width: 750px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   margin: 0 auto;
 }
+
 .listBtn {
   display: flex;
   gap: 30px;
